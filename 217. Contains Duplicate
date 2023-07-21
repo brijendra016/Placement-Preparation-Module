@@ -1,0 +1,15 @@
+class Solution {
+    public boolean containsDuplicate(int[] a) {
+        int i,l;
+        Map<Integer, Integer> mp = new HashMap<Integer,Integer>();
+        l=a.length;
+        for(i=0;i<l;i++)
+        {
+            if(mp.containsKey(a[i]))
+            return true;
+            else
+            mp.put(a[i],1);
+        }
+        return false;
+    }
+}
